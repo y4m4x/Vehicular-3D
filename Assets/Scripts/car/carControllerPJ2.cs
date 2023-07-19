@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class carController : MonoBehaviour
+public class carControllerPJ2 : MonoBehaviour
 {
     [SerializeField] WheelCollider frontRight;
     [SerializeField] WheelCollider backRight;
@@ -24,7 +24,7 @@ public class carController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        currentAcceleration = acceleration * Input.GetAxis("Vertical");
+        currentAcceleration = acceleration * Input.GetAxis("VerticalPJ2");
 
         if (Input.GetKey(KeyCode.RightShift))
             currentBreakForce = breakingForce;
@@ -40,7 +40,7 @@ public class carController : MonoBehaviour
         backLeft.brakeTorque = currentBreakForce;
         backRight.brakeTorque = currentBreakForce;
 
-        currentTurnAngle = maxTurnAngle * Input.GetAxis("Horizontal");
+        currentTurnAngle = maxTurnAngle * Input.GetAxis("HorizontalPJ2");
         frontLeft.steerAngle = currentTurnAngle;
         frontRight.steerAngle = currentTurnAngle;
 
