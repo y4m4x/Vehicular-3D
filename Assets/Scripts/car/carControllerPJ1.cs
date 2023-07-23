@@ -26,7 +26,7 @@ public class carControllerPJ1 : MonoBehaviour
     {
         currentAcceleration = acceleration * Input.GetAxis("VerticalPJ1");
 
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.LeftShift))
             currentBreakForce = breakingForce;
 
         else
@@ -57,6 +57,5 @@ public class carControllerPJ1 : MonoBehaviour
         trans.position = Position;
         trans.rotation = rotation;
     }
-
 }
 
