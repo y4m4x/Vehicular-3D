@@ -9,6 +9,8 @@ TagManager:
   - Ball
   - Net1
   - Net2
+  - PJ2ScoreScreen
+  - PJ1ScoreScreen
   layers:
   - Default
   - TransparentFX

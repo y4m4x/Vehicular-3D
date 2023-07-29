@@ -9,7 +9,6 @@ public class goalsControllerPJ2 : MonoBehaviour
     public static goalsControllerPJ2 instance;
     public int score;
     public Text text;
-    public GameObject PJ2ScoreScreen;
 
     private void Awake()
     {

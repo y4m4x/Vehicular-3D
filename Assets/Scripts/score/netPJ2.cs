@@ -8,17 +8,16 @@ public class netPJ2 : MonoBehaviour
 
     public GameObject PJ1ScoreScreen;
 
-    public GameManagerPJ1 GameManager;
+    public goalsControllerPJ1 goalsController;
 
     public float score;
-    
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Ball")
         {
-            PJ1ScoreScreen.SetActive(true);
-            GameManager.addGoal();
-            SceneManager.LoadScene("SampleScene");
+            PJ1ScoreScreen = GameObject.FindWithTag("PJ1ScoreScreen");
+            goalsController.addGoal();
+            SceneManager.LoadScene("VictoryPJ1");
         }
     }
 }
