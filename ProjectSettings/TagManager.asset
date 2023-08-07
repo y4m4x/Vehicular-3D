@@ -11,6 +11,9 @@ TagManager:
   - Net2
   - PJ2ScoreScreen
   - PJ1ScoreScreen
+  - PJ1Score
+  - PJ2Score
+  - GameManager
   layers:
   - Default
   - TransparentFX

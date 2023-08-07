@@ -5,13 +5,28 @@ using UnityEngine.SceneManagement;
 
 public class playButton : MonoBehaviour
 {
-    public void Start()
+    private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.KeypadEnter))
+        {
+            startGame();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Close();
+        }
+    }
+
+    public void startGame()
+    {
+        Debug.Log("PlayGame");
         SceneManager.LoadScene("SampleScene");
     }
 
     public void Close()
     {
+        Debug.Log("CloseGame");
         Application.Quit();
     }
 }
